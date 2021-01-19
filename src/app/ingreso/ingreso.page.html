@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="#74757B">
+    <ion-title>INICIO DE SESIÓN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>
+      Correo electrónico:
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      Contraseña:
+    </ion-label>
+    <ion-input type="password" [(ngModel)]="user.password"></ion-input>>
+  </ion-item>
+
+  <ion-item-divider>
+    <ion-button color="#74757B" size="large" (click)="onLogin()">Iniciar sesión</ion-button>
+    <ion-button color="#74757B" size="large" routerLink="/registro">Nuevo</ion-button>
+  </ion-item-divider>
+</ion-content>
