@@ -4,16 +4,15 @@
 
 export const environment = {
   production: false,
-  firebaseConfig : {
-    apiKey: "AIzaSyD6LXGpJw_s_1XXI0COvnoZPgrruM5zWi0",
-    authDomain: "examen1-sg.firebaseapp.com",
-    projectId: "examen1-sg",
-    storageBucket: "examen1-sg.appspot.com",
-    messagingSenderId: "433129190042",
-    appId: "1:433129190042:web:6edf1225f46f69648d6523",
-    measurementId: "G-G706GKJFNK"
-  }
-};
+  firebase : {
+    apiKey: "AIzaSyC2KWXwDZ19N9LVqBcrHvNvlKRYVy9GDIQ",
+    authDomain: "examen-sg.firebaseapp.com",
+    projectId: "examen-sg",
+    storageBucket: "examen-sg.appspot.com",
+    messagingSenderId: "260994103580",
+    appId: "1:260994103580:web:5cfad361ef8c8feba5e2d9",
+    measurementId: "G-YMNMHCW731"
+  }};
 
 /*
  * For easier debugging in development mode, you can import the following file
