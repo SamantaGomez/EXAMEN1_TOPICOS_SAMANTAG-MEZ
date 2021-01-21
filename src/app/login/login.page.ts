@@ -36,7 +36,6 @@ export class LoginPage implements OnInit {
     });
   }
 
-
   validation_messages = {
     'email': [
       { type: 'required', message: 'Email is required.' },

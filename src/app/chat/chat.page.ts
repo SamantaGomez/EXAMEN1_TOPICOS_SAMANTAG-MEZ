@@ -42,7 +42,7 @@ export class ChatPage implements OnInit {
   sendMessage() {
       this.chatService.addChatMessage(this.newMsg,this.userEmail).then(() => {
       this.newMsg = '';
-      this.content.scrollToButton();
+      //this.content.scrollToButton();
       this.messages = this.chatService.getChatMessages();
     });
   }

@@ -1,4 +1,4 @@
-<ion-header color="#74757B">
+<ion-header style="background-color: rgb(79, 165, 165);">
   <ion-toolbar color="#74757B">
     <ion-title class="ion-text-center">INICIO DE SESIÓN</ion-title>
   </ion-toolbar>
@@ -6,12 +6,12 @@
 
 <ion-img src="./assets/icon/user.png" style="width: 50%; height: 50%; margin-left:80px;"></ion-img>>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding" style="background-color: darkgray;">
   <form class="form" [formGroup]="validations_form" (ngSubmit)="loginUser(validations_form.value)">
 
     <ion-item>
-      <ion-label position="floating" color="#EBC4B7">Correo Electrónico:</ion-label>
-      <ion-input type="text" formControlName="email"></ion-input>
+      <ion-label position="floating">Correo Electrónico:</ion-label>
+      <ion-input type="text" formControlName="email" placeholder="Correo Electrónico:"></ion-input>
     </ion-item>
     <div class="validation-errors">
       <ng-container *ngFor="let validation of validation_messages.email">
@@ -22,8 +22,8 @@
       </ng-container>
     </div>
     <ion-item>
-      <ion-label position="floating" color="#EBC4B7">Contraseña:</ion-label>
-      <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
+      <ion-label position="floating">Contraseña:</ion-label>
+      <ion-input placeholder="Contraseña:" type="password" formControlName="password" class="form-controll" required></ion-input>
     </ion-item>
     <div class="validation-errors">
       <ng-container *ngFor="let validation of validation_messages.password">

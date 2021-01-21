@@ -11,7 +11,6 @@ export interface User {
   email: string;
   
 }
- 
 export interface Message {
   createdAt: firebase.firestore.FieldValue;
   id: string;
@@ -19,9 +18,7 @@ export interface Message {
   msg: string;
   fromName: string;
   myMsg: boolean;
-  
 }
- 
 @Injectable({
   providedIn: 'root'
 })
