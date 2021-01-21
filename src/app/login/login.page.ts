@@ -15,15 +15,11 @@ export class LoginPage implements OnInit {
   errorMessage: string = '';
 
   constructor(
-
     private navCtrl: NavController,
     private authService: AuthenticateService,
     private formBuilder: FormBuilder
-
   ) { }
-
   ngOnInit() {
-
     this.validations_form = this.formBuilder.group({
       email: new FormControl('', Validators.compose([
         Validators.required,
@@ -35,7 +31,6 @@ export class LoginPage implements OnInit {
       ])),
     });
   }
-
   validation_messages = {
     'email': [
       { type: 'required', message: 'Email is required.' },
@@ -46,8 +41,6 @@ export class LoginPage implements OnInit {
       { type: 'minlength', message: 'Password must be at least 5 characters long.' }
     ]
   };
-
-
   loginUser(value) {
     this.authService.loginUser(value)
       .then(res => {
@@ -58,7 +51,6 @@ export class LoginPage implements OnInit {
         this.errorMessage = err.message;
       })
   }
-
   goToRegisterPage() {
     this.navCtrl.navigateForward('/register');
   }

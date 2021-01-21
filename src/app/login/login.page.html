@@ -6,12 +6,12 @@
 
 <ion-img src="./assets/icon/user.png" style="width: 50%; height: 50%; margin-left:80px;"></ion-img>>
 
-<ion-content class="ion-padding" style="background-color: darkgray;">
+<ion-content class="ion-padding" >
   <form class="form" [formGroup]="validations_form" (ngSubmit)="loginUser(validations_form.value)">
 
     <ion-item>
       <ion-label position="floating">Correo Electrónico:</ion-label>
-      <ion-input type="text" formControlName="email" placeholder="Correo Electrónico:"></ion-input>
+      <ion-input  type="text" formControlName="email" placeholder="Correo Electrónico:"></ion-input>
     </ion-item>
     <div class="validation-errors">
       <ng-container *ngFor="let validation of validation_messages.email">

@@ -14,7 +14,8 @@ export class ChatPage implements OnInit {
  
   messages: Observable<any[]>;
   newMsg = '';
- 
+  userEmail='string';
+
   constructor(private chatService: ChatService, private router: Router) { }
  
   ngOnInit() {
@@ -22,7 +23,7 @@ export class ChatPage implements OnInit {
   }
  
   sendMessage() {
-    this.chatService.addChatMessage(this.newMsg).then(() => {
+    this.chatService.addChatMessage(this.newMsg, this.userEmail).then(() => {
       this.newMsg = '';
       this.content.scrollToBottom();
     });

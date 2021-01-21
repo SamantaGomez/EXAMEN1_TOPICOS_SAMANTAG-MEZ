@@ -29,7 +29,7 @@
   <ion-toolbar color="light">
     <ion-row class="ion-align-items-center">
       <ion-col size="6">
-        <ion-textarea placeholder="Escribe tu mensajea" autoGrow="true" class="message-input" rows="1" maxLength="500" [(ngModel)]="newMsg" >
+        <ion-textarea placeholder="Escribe tu mensaje" autoGrow="true" class="message-input" rows="1" maxLength="500" [(ngModel)]="newMsg" >
         </ion-textarea>
       </ion-col>
       <ion-col size="3">
@@ -38,6 +38,11 @@
           <ion-icon name="send-outline" style="background-color: rgb(27, 46, 216);"></ion-icon>
         </ion-button>
       </ion-col>
+      <ion-card-content class="imageContainerButton" *ngIf="!isUploading && !isUploaded">
+        <ion-button class="imageContainer">
+          <input id="uploadBtn" type="file" class="upload" (change)="uploadFile($event.target.files)"/>
+        </ion-button>
+      </ion-card-content>
     </ion-row>
   </ion-toolbar>
 </ion-footer>
